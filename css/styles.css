@@ -1,0 +1,709 @@
+:root {
+    --pr-color : #258D68;
+}
+
+body {
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      
+      .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      background-color: #DCFFF3;
+      
+}
+
+/* navbar style */
+
+.navbar {
+  z-index: 3;
+}
+
+*{
+  z-index: 2;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.button-primary {
+    width: 133;
+    height: 40;
+    background-color: aliceblue;
+    color: var(--pr-color);
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar .btn-light {
+  color: white; /* Warna teks tombol */
+  background-color: transparent; /* Warna latar belakang tombol */
+  border: none; /* Border tombol */
+}
+
+.navbar .btn-light:hover {
+  color: var(--pr-color); /* Warna teks saat hover */
+  background-color: #f8f9fa; /* Warna latar belakang saat hover */
+  border-color: none; /* Border tombol saat hover */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .navbar {
+      padding: 0.5rem;
+  }
+
+  .button-primary {
+      width: 100%; /* Lebar penuh pada perangkat mobile */
+      font-size: 14px; /* Ukuran font yang lebih kecil pada perangkat mobile */
+  }
+
+  .navbar .btn-light {
+      font-size: 14px; /* Ukuran font tombol lebih kecil pada perangkat mobile */
+  }
+
+  .navbar .btn-light:hover {
+      font-size: 14px; /* Ukuran font tombol hover lebih kecil pada perangkat mobile */
+  }
+}
+
+@media (max-width: 1200px) {
+  .button-primary {
+      width: auto; /* Lebar otomatis untuk perangkat tablet */
+      font-size: 15px; /* Ukuran font sedikit lebih kecil untuk tablet */
+  }
+
+  .navbar .btn-light {
+      font-size: 15px; /* Ukuran font tombol lebih kecil pada perangkat tablet */
+  }
+
+  .navbar .btn-light:hover {
+      font-size: 15px; /* Ukuran font tombol hover lebih kecil pada perangkat tablet */
+  }
+}
+
+/* hero */
+#hero {
+  background: linear-gradient(160deg, #258D68, #165a42);
+  height:100vh;
+  width:100%;
+  
+}
+
+.img-hero{
+  height: 100%;
+  margin-top: 100px;
+  margin-left: -100px; /* Geser gambar ke kiri */
+}
+
+.hero-tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+    right: 40px; /* Menempatkan tagline 20px dari tepi kanan */
+    top: 50%; /* Menyelaraskan secara vertikal di tengah */
+    transform: translateY(-50%); /* Mengoreksi penyelarasan vertikal */
+    text-align: center; /* Menyelaraskan teks di sebelah kanan dalam div */
+}
+
+.hero-tagline h1 {
+  color:white ;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 72px;
+}
+
+.hero-tagline p {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  line-height: 30px;
+  width: 90%;
+}
+
+.button-lg-primary {
+  width: 200px ;
+  height: 40px;
+  background-color: white;
+  color: var(--pr-color);
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 767px) {
+  #hero {
+    height: 100vh; /* Mengurangi tinggi untuk perangkat mobile */
+  }
+
+  .img-hero{
+    max-width: 90%; /* Mengatur lebar maksimum gambar */
+    max-height: 40%; /* Mengatur tinggi maksimum gambar */
+    object-fit: contain; /* Menjaga rasio aspek gambar */
+    position: center; /* Posisi absolut untuk gambar */
+    top: 50%; /* Menempatkan gambar di tengah secara vertikal */
+    left: 50%; /* Menempatkan gambar di tengah secara horizontal */
+    transform: translate(-10%, -10%); /* Menggeser gambar untuk menempatkannya di tengah */
+  }
+
+  .hero-tagline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%; /* Menggeser tagline lebih dekat ke kiri pada perangkat mobile */
+    top: 70%; /* Menyelaraskan secara vertikal di tengah */
+    transform: translateY(-50%); /* Mengoreksi penyelarasan vertikal */
+    text-align: center;
+    width: 90%; /* Lebar tagline penuh pada perangkat mobile */
+    height: 100%;
+    padding: 0 0.5rem; /* Padding horizontal yang lebih kecil */
+  
+  }
+
+  .hero-tagline h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 8vw; /* Ukuran font responsif yang lebih besar untuk perangkat mobile */
+    line-height: 1.2; /* Jarak baris yang sesuai */
+  }
+  
+  /* Styling untuk paragraf di dalam tagline */
+  .hero-tagline p {
+    font-size: 4vw; /* Ukuran font responsif yang lebih besar untuk perangkat mobile */
+    color: white;
+    margin-bottom: 5vw; /* Margin bawah responsif yang lebih besar */
+    margin-top: 2vw; /* Margin atas responsif yang lebih kecil */
+    line-height: 1.4; /* Jarak baris yang sesuai */
+  }
+
+  .button-lg-primary {
+  width: 200px; /* Lebar tombol default */
+  height: 40px; /* Tinggi tombol default */
+  background-color: white;
+  color: var(--pr-color);
+  border: none;
+  font-size: 20px; /* Ukuran font default */
+  font-weight: 700;
+  margin-top: 20px;
+  display: flex; /* Menggunakan Flexbox untuk menyesuaikan teks di tengah */
+  align-items: center; /* Vertikal align ke tengah */
+  justify-content: center; /* Horizontal align ke tengah */
+
+  }
+}
+
+/* Responsive Design for Tablets and Larger Devices */
+@media (max-width: 1200px) {
+  .hero-tagline h1 {
+    font-size: 4vw; /* Ukuran font yang lebih kecil untuk tablet */
+  }
+
+  .hero-tagline p {
+    font-size: 2.5vw; /* Ukuran font yang lebih kecil untuk tablet */
+    margin-bottom: 4vw; /* Margin bawah responsif untuk tablet */
+  }
+
+  .button-lg-primary {
+    font-size: 1.2vw; /* Ukuran font tombol yang lebih kecil untuk tablet */
+  }
+}
+
+/* Pengertian */
+
+.card-button {
+  background: none; /* Menghapus latar belakang default tombol */
+  border: none; /* Menghapus border default tombol */
+  padding: 0; /* Menghapus padding default tombol */
+  cursor: pointer; /* Menunjukkan kursor tangan saat hover */
+  text-align: center; /* Memastikan teks dan konten tidak terpusat */
+  display: inline-block; /* Membuat tombol inline */
+  width: 100%; /* Membuat tombol memenuhi lebar kontainer */
+}
+
+#pengertian{
+  padding: 100px 0;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--pr-color);
+}
+
+.card-pengertian {
+width: 100%;
+height: 313px;
+border-radius: 5px;
+background:white;
+padding: 40px;
+box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+
+transition: all .2s ease-in;
+}
+
+.circle-icon {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all .1s ease-in;
+}
+
+.card-pengertian h3 {
+  color: var(--pr-color);
+  font-size: 24px;
+  transition: all .2s ease-in;
+}
+
+.card-pengertian p {
+  color: black;
+  font-size: 14px;
+  transition: all .1s ease-in;
+}
+
+/* hover */
+
+.card-pengertian:hover {
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  background: linear-gradient(160deg, #258D68, #165a42);
+  padding: 40px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  transition: all .1s ease-in;
+  }
+  
+  .card-pengertian:hover .circle-icon{
+    background-color: white;
+    transition: all .1s ease-in;
+  }
+
+  
+  .card-pengertian:hover h3 {
+    color: white;
+    font-size: 24px;
+    transition: all .1s ease-in;
+  }
+  
+  .card-pengertian:hover p {
+    color: white;
+    font-size: 14px;
+    transition: all .1s ease-in;
+  }
+
+  @media (max-width: 767px) {
+    .card-pengertian {
+      padding: 15px; /* Mengurangi padding pada perangkat mobile */
+    }
+    
+    .card-pengertian h3 {
+      font-size: 18px; /* Mengurangi ukuran font h3 pada perangkat mobile */
+    }
+    
+    .card-pengertian p {
+      font-size: 12px; /* Mengurangi ukuran font p pada perangkat mobile */
+    }
+  }
+
+  /* Search Section */
+
+  #search{
+    background-image: url(../assets/img/image4.png);
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #search h2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 72px;
+    letter-spacing: 0cm;
+    text-align: center;
+    color: white;
+  }
+
+  #search p {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0cm;
+    text-align: center;
+    color: white;
+
+  }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  
+  /* Gaya untuk gambar-gambar */
+  figure {
+    margin: 10px;
+    padding: 50px;
+    position: relative; /* Membantu penataan elemen anak */
+
+  }
+  
+  figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
+    box-shadow: 0 4px 8px rgb(94, 94, 94); /* Menambahkan bayangan pada gambar */
+    display: block; /* Menghilangkan ruang ekstra di bawah gambar */
+  }
+
+  /* Gaya untuk caption gambar */
+  figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666; /* Warna teks deskripsi gambar */
+  }
+  
+  /* Layout gambar untuk perangkat mobile */
+  @media (max-width: 767px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .col-md-4 {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+/* Styling untuk section jenis */
+#jenis {
+  background-color: none; /* Tidak ada warna latar belakang */
+  height: 100vh; /* Tinggi 90% dari viewport */
+  background-repeat: no-repeat; /* Tidak mengulangi gambar latar belakang */
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center; /* Posisi gambar di tengah */
+  display: flex; /* Menggunakan Flexbox untuk tata letak */
+  align-items: center; /* Menyelaraskan item di tengah secara vertikal */
+  justify-content: center; /* Menyelaraskan item di tengah secara horizontal */
+  padding: 0 3rem; /* Padding horizontal jika diperlukan */
+}
+
+/* Styling untuk heading di dalam search */
+#jenis h2 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--pr-color);
+  margin-top: 10rem; /* Jarak tambahan di atas heading */
+}
+
+#jenis h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  color: var(--pr-color);
+  margin-top: 1rem; /* Jarak tambahan di atas heading */
+}
+
+/* Styling untuk paragraf di dalam search */
+#jenisv p {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  color: var(--pr-color);
+  margin-top: 1rem; /* Jarak tambahan di atas paragraf */
+}
+
+/* Styling untuk gambar di dalam kolom */
+.img-fluid {
+  max-width: 100%; /* Menjaga gambar tidak melampaui lebar kontainer */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 8px; /* Menambahkan sudut melengkung pada gambar jika diinginkan */
+}
+
+/* Styling untuk konten kolom */
+.column-content {
+  padding: 2rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 6rem; 
+}
+
+/* Tambahan jarak di bawah gambar */
+.mb-3 {
+  margin-bottom: none; /* Menambahkan jarak di bawah gambar */
+}
+
+/* Styling tambahan untuk teks dalam kolom */
+.column-content h3 {
+  margin-top: 0;
+}
+
+.column-content p {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------- */
+
+
+/* Styling untuk section struktur */
+#struktur {
+  position: relative; /* Menyediakan posisi relatif untuk konten dan gambar overlay */
+  background-color: var(--pr-color); /* Warna latar belakang konten */
+  height: auto; /* Tinggi otomatis sesuai konten */
+  padding: 2rem 0; /* Padding atas dan bawah */
+  overflow: hidden; /* Menyembunyikan konten yang melampaui batas */
+}
+
+.background-image {
+  position: absolute; /* Posisi absolute untuk overlay gambar */
+  top: 0; /* Posisi di bagian atas */
+  left: 0; /* Posisi di bagian kiri */
+  width: 100%; /* Lebar penuh kontainer */
+  height: 100%; /* Tinggi penuh kontainer */
+  background-image:url(../assets/img/image4.png); /* Ganti dengan path gambar Anda */
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center; /* Posisi gambar di tengah */
+  background-repeat: no-repeat; /* Tidak mengulangi gambar */
+  z-index: -1; /* Menempatkan gambar di belakang konten */
+}
+
+.background-overlay {
+  position: absolute; /* Posisi absolute untuk overlay */
+  top: 0; /* Posisi di bagian atas */
+  left: 0; /* Posisi di bagian kiri */
+  width: 100%; /* Lebar penuh kontainer */
+  height: 100%; /* Tinggi penuh kontainer */
+  background: rgba(2, 97, 56, 0.866); /* Overlay semi-transparan hitam (sesuaikan warna dan opasitas) */
+  z-index: 1; /* Menempatkan overlay di atas gambar */
+}
+
+.container {
+  position: relative; /* Menyediakan posisi relatif untuk konten di atas gambar */
+  z-index: 1; /* Menempatkan konten di atas gambar */
+}
+
+/* Styling untuk heading di dalam struktur */
+#struktur h2 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px;
+  letter-spacing: 0;
+  text-align: center;
+  color: white;
+  margin-top: 2rem; /* Jarak tambahan di atas heading */
+}
+
+/* Kontainer scrollable */
+.scroll-container {
+  position: relative;
+  overflow: hidden; /* Menyembunyikan scrollbar */
+  width: 100%; /* Mengisi lebar kontainer */
+}
+
+.scroll-content {
+  display: flex; /* Menyusun kolom secara horizontal */
+  overflow-x: auto; /* Membolehkan scroll horizontal */
+  scroll-behavior: smooth; /* Efek scroll yang halus */
+}
+
+.col-md-4 {
+  flex: 0 0 auto; /* Membuat kolom tidak menyusut */
+  width: 33.33%; /* Lebar kolom 1/3 dari kontainer */
+  margin-bottom: 2rem; /* Jarak di bawah setiap kolom */
+}
+
+/* Styling untuk konten kolom */
+.column-content {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  flex: 1; /* Membuat konten mengisi ruang kolom */
+}
+
+/* Styling untuk gambar di dalam kolom */
+.img-fluid {
+  max-width: 100%; /* Menjaga gambar tidak melampaui lebar kontainer */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 8px; /* Menambahkan sudut melengkung pada gambar jika diinginkan */
+}
+
+/* Tambahan jarak di bawah gambar */
+.mb-2 {
+  margin-bottom: 1rem; /* Menambahkan jarak di bawah gambar */
+}
+
+/* Styling untuk panah */
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Mencegah panah mengecil */
+  width: 30px; /* Lebar panah */
+  margin: 15px 15px; /* Jarak horizontal dari kolom */
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-top: 10px solid #ffffff;
+  border-right: 10px solid #ffffff;
+  transform: rotate(45deg); /* Membuat panah menghadap ke kanan */
+}
+
+/* Styling untuk tombol navigasi */
+.navigation {
+  display: none; /* Menyembunyikan seluruh kontainer navigasi */
+}
+
+/* Jika Anda hanya ingin menyembunyikan tombol tanpa menghapus kontainer */
+.scroll-button {
+  display: none; /* Menyembunyikan tombol scroll */
+}
+
+.scroll-button:hover {
+  display: none;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto; /* Mengizinkan scroll horizontal */
+  scroll-snap-type: x mandatory; /* Snap scrolling */
+  gap: 1rem; /* Jarak antar kolom */
+  padding: 1rem; /* Padding di sekitar kontainer */
+  border-radius: 12px; /* Sudut melengkung */
+  background: transparent; /* Latar belakang kontainer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transisi halus */
+}
+
+.scroll-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar saat hover */
+  transform: scale(1.02); /* Efek zoom saat hover */
+}
+
+/* Mengatur scroll behavior */
+.scroll-container::-webkit-scrollbar {
+  height: 8px; /* Lebar scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Warna scrollbar */
+  border-radius: 4px; /* Sudut melengkung scrollbar */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Warna scrollbar saat hover */
+}
+
+/* ------------------------------------ */
+
+/* Kaidah */
+
+/* General Section Styles */
+#kaidah {
+  background-color: transparent; /* Ubah sesuai kebutuhan */
+  padding: 2rem 0; /* Padding atas dan bawah */
+  margin-top: 4rem; /* Jarak ekstra di atas section */
+}
+
+#kaidah .container {
+  max-width: 1140px; /* Max width for the container */
+  margin: 0 auto; /* Center align container */
+}
+
+#kaidah p {
+  font-family: 'poppins';
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  color:#666; /* Dark color for main heading */
+}
+
+#kaidah h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--pr-color); /* Dark color for main heading */
+}
+
+.content-card {
+  background-color: white; /* White background for cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for card effect */
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.content-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--pr-color); /* Slightly lighter color for subheadings */
+}
+
+.content-card p {
+  font-family:'poppins';
+  font-size: 14px;
+  color: #666; /* Medium color for paragraph text */
+}
+
+.content-card:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* ---------------- */
+
+/* Footer */
+
+/* Styling untuk footer copyright */
+.footer-copyright {
+  background-color: var(--pr-color); /* Warna latar belakang footer */
+  color: #fff; /* Warna teks */
+  padding: 1rem 0; /* Padding atas dan bawah */
+}
+
+.footer-text {
+  font-size: 14px;
+  margin: 0; /* Menghilangkan margin default */
+}
