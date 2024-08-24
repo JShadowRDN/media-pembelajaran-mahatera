@@ -167,7 +167,7 @@ body {
     object-fit: contain; /* Menjaga rasio aspek gambar */
     position: center; /* Posisi absolut untuk gambar */
     top: 50%; /* Menempatkan gambar di tengah secara vertikal */
-    left: 50%; /* Menempatkan gambar di tengah secara horizontal */
+    left: 40%; /* Menempatkan gambar di tengah secara horizontal */
     transform: translate(-10%, -10%); /* Menggeser gambar untuk menempatkannya di tengah */
   }
 
