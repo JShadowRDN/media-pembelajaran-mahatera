@@ -336,6 +336,16 @@ transition: all .2s ease-in;
     gap: 10px; /* Jarak antar card lebih kecil */
   }
 
+    .card-button {
+  background: none; /* Menghapus latar belakang default tombol */
+  border: none; /* Menghapus border default tombol */
+  padding: 0; /* Menghapus padding default tombol */
+  cursor: pointer; /* Menunjukkan kursor tangan saat hover */
+  text-align: center; /* Memastikan teks dan konten tidak terpusat */
+  display: inline-block; /* Membuat tombol inline */
+  width: 100%; /* Membuat tombol memenuhi lebar kontainer */
+}
+
   .card-pengertian {
     height: auto; /* Mengatur tinggi card otomatis agar sesuai dengan konten */
     padding: 20px; /* Padding internal card */
