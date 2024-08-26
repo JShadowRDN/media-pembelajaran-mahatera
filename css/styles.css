@@ -1,5 +1,5 @@
 :root {
-    --pr-color : #258D68;
+    --pr-color : #83c7ff;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
         font-style: normal;
       }
 
-      background-color: #DCFFF3;
+      background-color: #ecf4fa;
       
 }
 
@@ -98,7 +98,7 @@ body {
 
 /* hero */
 #hero { 
-  background: linear-gradient(160deg, #258D68, #165a42);
+  background: linear-gradient(160deg, #83c7ff, #51b1ff);
   height:100vh;
   width:100%;
   
@@ -106,8 +106,27 @@ body {
 
 .img-hero{
   height: 100%;
-  margin-top: 100px;
-  margin-left: -100px; /* Geser gambar ke kiri */
+  margin-top: 110px;
+  margin-left: -10px; /* Geser gambar ke kiri */
+  width: 55%;
+}
+
+.img-new {
+  position: absolute;
+  margin-top: 5%; /* Adjust as needed */
+  margin-left: -13%; /* Adjust as needed */
+  z-index: 2; /* Ensure the new image is in front */
+  width: 300px; /* Adjust to make the image smaller */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.img-second {
+  position: absolute;
+  margin-top: 5%; /* Adjust as needed */
+  margin-left: 90%; /* Adjust as needed */
+  z-index: 2; /* Ensure the new image is in front */
+  width: 200px; /* Adjust to make the image smaller */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .hero-tagline {
@@ -117,7 +136,7 @@ body {
   justify-content: center;
   position: absolute;
     right: 40px; /* Menempatkan tagline 20px dari tepi kanan */
-    top: 50%; /* Menyelaraskan secara vertikal di tengah */
+    top: 60%; /* Menyelaraskan secara vertikal di tengah */
     transform: translateY(-50%); /* Mengoreksi penyelarasan vertikal */
     text-align: center; /* Menyelaraskan teks di sebelah kanan dalam div */
 }
@@ -167,8 +186,26 @@ body {
     object-fit: contain; /* Menjaga rasio aspek gambar */
     position: center; /* Posisi absolut untuk gambar */
     top: 50%; /* Menempatkan gambar di tengah secara vertikal */
-    left: 40%; /* Menempatkan gambar di tengah secara horizontal */
-    transform: translate(-10%, -10%); /* Menggeser gambar untuk menempatkannya di tengah */
+    left: 100%; /* Menempatkan gambar di tengah secara horizontal */
+    transform: translate(40%, 10%); /* Menggeser gambar untuk menempatkannya di tengah */
+  }
+
+  .img-new {
+    position: absolute;
+    margin-top: 10%; /* Adjust as needed */
+    margin-left: 5%; /* Adjust as needed */
+    z-index: 2; /* Ensure the new image is in front */
+    width: 125px; /* Adjust to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .img-second {
+    position: absolute;
+    margin-top: 10%; /* Adjust as needed */
+    margin-left: 70%; /* Adjust as needed */
+    z-index: 2; /* Ensure the new image is in front */
+    width: 100px; /* Adjust to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .hero-tagline {
@@ -265,7 +302,7 @@ body {
 h2 {
   font-size: 48px;
   font-weight: 500;
-  color: var(--pr-color);
+  color: #287dc2;
 }
 
 .card-pengertian {
@@ -305,7 +342,7 @@ transition: all .2s ease-in;
   width: 100%;
   height: 313px;
   border-radius: 5px;
-  background: linear-gradient(160deg, #258D68, #165a42);
+  background: linear-gradient(160deg, #83c7ff, #51b1ff);
   padding: 40px;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
   transition: all .1s ease-in;
@@ -336,20 +373,9 @@ transition: all .2s ease-in;
     gap: 10px; /* Jarak antar card lebih kecil */
   }
 
-    .card-button {
-  background: none; /* Menghapus latar belakang default tombol */
-  border: none; /* Menghapus border default tombol */
-  padding: 0; /* Menghapus padding default tombol */
-  cursor: pointer; /* Menunjukkan kursor tangan saat hover */
-  text-align: center; /* Memastikan teks dan konten tidak terpusat */
-  display: inline-block; /* Membuat tombol inline */
-  width: 100%; /* Membuat tombol memenuhi lebar kontainer */
-}
-
   .card-pengertian {
     height: auto; /* Mengatur tinggi card otomatis agar sesuai dengan konten */
     padding: 20px; /* Padding internal card */
-      background:white;
   }
 
   .circle-icon {
@@ -403,31 +429,35 @@ transition: all .2s ease-in;
   /* Search Section */
 
   #search{
-    background-image: url(../assets/img/image4.png);
+    background-image: url(../assets/132.jpg);
     height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
   }
 
+
   #search h2 {
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
+    font-size: 56px;
+    font-style: poppins;
+    font-weight: 500;
     line-height: 72px;
     letter-spacing: 0cm;
     text-align: center;
     color: white;
+    margin-top: 50px; 
   }
 
   #search p {
     font-size: 24px;
-    font-style: normal;
+    font-family: 'Poppins', sans-serif; /* Perbaiki 'font-style' menjadi 'font-family' */
     font-weight: 400;
     line-height: 36px;
-    letter-spacing: 0cm;
+    letter-spacing: 0px; /* Gunakan 'px' untuk satuan jarak */
     text-align: center;
     color: white;
+    margin-bottom: 20px; /* Jarak antar paragraf */
 
   }
 
@@ -436,28 +466,7 @@ transition: all .2s ease-in;
     margin: 0 auto;
   }
   
-  /* Gaya untuk gambar-gambar */
-  figure {
-    margin: 10px;
-    padding: 50px;
-    position: relative; /* Membantu penataan elemen anak */
-
-  }
-  
-  figure img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Menambahkan sudut melengkung pada gambar */
-    box-shadow: 0 4px 8px rgb(94, 94, 94); /* Menambahkan bayangan pada gambar */
-    display: block; /* Menghilangkan ruang ekstra di bawah gambar */
-  }
-
-  /* Gaya untuk caption gambar */
-  figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #666; /* Warna teks deskripsi gambar */
-  }
+ 
   
   /* Layout gambar untuk perangkat mobile */
   @media (max-width: 767px) {
@@ -469,7 +478,6 @@ transition: all .2s ease-in;
   
     .col-md-4 {
       width: 100%;
-      margin-bottom: 1rem;
     }
     #search h2 {
       font-size: 36px;
@@ -479,6 +487,7 @@ transition: all .2s ease-in;
       letter-spacing: 0cm;
       text-align: center;
       color: white;
+      margin-top: -7%; /* Adjust as needed to move h2 up */
     }
   
     #search p {
@@ -498,7 +507,7 @@ transition: all .2s ease-in;
 
 /* Styling untuk section jenis */
 #jenis {
-  background-color: none; /* Tidak ada warna latar belakang */
+  background-image: url(../assets/TP.jpg); /* Tidak ada warna latar belakang */
   height: 100vh; /* Tinggi 90% dari viewport */
   background-repeat: no-repeat; /* Tidak mengulangi gambar latar belakang */
   background-size: cover; /* Menutupi seluruh area */
@@ -511,14 +520,15 @@ transition: all .2s ease-in;
 
 /* Styling untuk heading di dalam search */
 #jenis h2 {
-  font-size: 48px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 600;
   line-height: 72px;
   letter-spacing: 0;
   text-align: center;
-  color: var(--pr-color);
-  margin-top: 10rem; /* Jarak tambahan di atas heading */
+  color: white;
+  margin-top: 5rem; /* Jarak tambahan di atas heading */
+  margin-bottom: 3rem;
 }
 
 #jenis h3 {
@@ -579,7 +589,7 @@ transition: all .2s ease-in;
 @media (max-width: 768px) {
   #jenis {
     background-color: none; /* Tidak ada warna latar belakang */
-    height: 150vh; /* Tinggi 90% dari viewport */
+    height: 200vh; /* Tinggi 90% dari viewport */
     background-repeat: no-repeat; /* Tidak mengulangi gambar latar belakang */
     background-size: cover; /* Menutupi seluruh area */
     background-position: center; /* Posisi gambar di tengah */
@@ -592,7 +602,7 @@ transition: all .2s ease-in;
   #jenis h2 {
     font-size: 36px; /* Mengurangi ukuran font untuk heading pada perangkat mobile */
     line-height: 48px; /* Mengurangi jarak baris untuk heading */
-    margin-top: 5rem; /* Mengurangi jarak atas heading pada perangkat mobile */
+    margin-top: 10rem; /* Mengurangi jarak atas heading pada perangkat mobile */
   }
 
   #jenis h3 {
@@ -654,7 +664,7 @@ transition: all .2s ease-in;
 /* Styling untuk section struktur */
 #struktur {
   position: relative; /* Menyediakan posisi relatif untuk konten dan gambar overlay */
-  background-color: var(--pr-color); /* Warna latar belakang konten */
+  background-color: none; /* Warna latar belakang konten */
   height: auto; /* Tinggi otomatis sesuai konten */
   padding: 2rem 0; /* Padding atas dan bawah */
   overflow: hidden; /* Menyembunyikan konten yang melampaui batas */
@@ -679,7 +689,7 @@ transition: all .2s ease-in;
   left: 0; /* Posisi di bagian kiri */
   width: 100%; /* Lebar penuh kontainer */
   height: 100%; /* Tinggi penuh kontainer */
-  background: rgba(2, 97, 56, 0.866); /* Overlay semi-transparan hitam (sesuaikan warna dan opasitas) */
+  background: var(--pr-color); /* Overlay semi-transparan hitam (sesuaikan warna dan opasitas) */
   z-index: 1; /* Menempatkan overlay di atas gambar */
 }
 
@@ -890,6 +900,75 @@ transition: all .2s ease-in;
   transform: translateY(-10px); /* Lift card on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
+
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+   display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    display: flex; /* Use flexbox to center the modal */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+}
+
 
 /* ---------------- */
 
