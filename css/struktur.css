@@ -175,7 +175,7 @@ body {
     justify-content: center;
     position: absolute;
     left: 8%; /* Menggeser tagline lebih dekat ke kiri pada perangkat mobile */
-    top: 30%; /* Menyelaraskan secara vertikal di tengah */
+    top: 15%; /* Menyelaraskan secara vertikal di tengah */
     transform: translateY(-50%); /* Mengoreksi penyelarasan vertikal */
     text-align: center;
     width: 90%; /* Lebar tagline penuh pada perangkat mobile */
@@ -187,8 +187,8 @@ body {
   .hero-tagline h1 {
     color: white;
     font-weight: 700;
-    font-size: 8vw; /* Ukuran font responsif yang lebih besar untuk perangkat mobile */
-    line-height: 1.2; /* Jarak baris yang sesuai */
+    font-size: 10vw; /* Ukuran font responsif yang lebih besar untuk perangkat mobile */
+    line-height: 1.; /* Jarak baris yang sesuai */
   }
   
   /* Styling untuk paragraf di dalam tagline */
