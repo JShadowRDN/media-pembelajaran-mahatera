@@ -1,0 +1,333 @@
+:root {
+    --pr-color : #83c7ff;
+}
+
+body {
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      
+      .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      background-color: #ecf4fa;
+      
+}
+
+/* navbar style */
+
+.navbar {
+  z-index: 3;
+}
+
+*{
+  z-index: 2;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.button-primary {
+    width: 133;
+    height: 40;
+    background-color: aliceblue;
+    color: var(--pr-color);
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar .btn-light {
+  color: white; /* Warna teks tombol */
+  background-color: transparent; /* Warna latar belakang tombol */
+  border: none; /* Border tombol */
+}
+
+.navbar .btn-light:hover {
+  color: var(--pr-color); /* Warna teks saat hover */
+  background-color: #f8f9fa; /* Warna latar belakang saat hover */
+  border-color: none; /* Border tombol saat hover */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .navbar {
+      padding: 0.5rem;
+  }
+
+  .button-primary {
+      width: 100%; /* Lebar penuh pada perangkat mobile */
+      font-size: 14px; /* Ukuran font yang lebih kecil pada perangkat mobile */
+  }
+
+  .navbar .btn-light {
+      font-size: 14px; /* Ukuran font tombol lebih kecil pada perangkat mobile */
+  }
+
+  .navbar .btn-light:hover {
+      font-size: 14px; /* Ukuran font tombol hover lebih kecil pada perangkat mobile */
+  }
+}
+
+@media (max-width: 1200px) {
+  .button-primary {
+      width: auto; /* Lebar otomatis untuk perangkat tablet */
+      font-size: 15px; /* Ukuran font sedikit lebih kecil untuk tablet */
+  }
+
+  .navbar .btn-light {
+      font-size: 15px; /* Ukuran font tombol lebih kecil pada perangkat tablet */
+  }
+
+  .navbar .btn-light:hover {
+      font-size: 15px; /* Ukuran font tombol hover lebih kecil pada perangkat tablet */
+  }
+}
+
+/* hero */
+#hero { 
+  background: linear-gradient(160deg, #83c7ff, #51b1ff);
+  height:30vh;
+  width:100%;
+  
+}
+
+
+.hero-tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12%; /* Menempatkan tagline di tengah vertikal kontainer */
+  left: 50%; /* Menempatkan tagline di tengah horizontal kontainer */
+  transform: translate(-50%, -50%); /* Menggeser tagline untuk benar-benar berada di tengah */
+  text-align: center; /* Menyelaraskan teks di tengah */
+  width: 80%; /* Atur lebar jika diperlukan, atau sesuaikan sesuai kebutuhan */
+  max-width: 800px; /* Maksimum lebar untuk tagline agar tidak terlalu lebar */
+}
+
+.hero-tagline h1 {
+  color:white ;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 72px;
+}
+
+.hero-name {
+  font-size: 0.5em; /* Mengatur ukuran font lebih kecil dari teks utama */
+  color: #040202; /* Opsional: mengubah warna teks */
+}
+
+
+.hero-tagline p {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  line-height: 5%;
+  width: 90%;
+}
+
+.button-lg-primary {
+  width: 200px ;
+  height: 40px;
+  background-color: white;
+  color: var(--pr-color);
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 767px) {
+  #hero {
+    height: 50vh; /* Mengurangi tinggi untuk perangkat mobile */
+  }
+
+  .img-hero{
+    max-width: 90%; /* Mengatur lebar maksimum gambar */
+    max-height: 40%; /* Mengatur tinggi maksimum gambar */
+    object-fit: contain; /* Menjaga rasio aspek gambar */
+    position: center; /* Posisi absolut untuk gambar */
+    top: 50%; /* Menempatkan gambar di tengah secara vertikal */
+    left: 50%; /* Menempatkan gambar di tengah secara horizontal */
+    transform: translate(-10%, -10%); /* Menggeser gambar untuk menempatkannya di tengah */
+  }
+
+  .hero-tagline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 8%; /* Menggeser tagline lebih dekat ke kiri pada perangkat mobile */
+    top: 30%; /* Menyelaraskan secara vertikal di tengah */
+    transform: translateY(-50%); /* Mengoreksi penyelarasan vertikal */
+    text-align: center;
+    width: 90%; /* Lebar tagline penuh pada perangkat mobile */
+    height: 100%;
+    padding: 0 0.5rem; /* Padding horizontal yang lebih kecil */
+  
+  }
+
+  .hero-tagline h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 8vw; /* Ukuran font responsif yang lebih besar untuk perangkat mobile */
+    line-height: 1.2; /* Jarak baris yang sesuai */
+  }
+  
+  /* Styling untuk paragraf di dalam tagline */
+  .hero-tagline p {
+    font-size: 4vw; /* Ukuran font responsif yang lebih besar untuk perangkat mobile */
+    color: white;
+    margin-bottom: 5vw; /* Margin bawah responsif yang lebih besar */
+    margin-top: 2vw; /* Margin atas responsif yang lebih kecil */
+    line-height: 1.4; /* Jarak baris yang sesuai */
+  }
+
+  .button-lg-primary {
+  width: 200px; /* Lebar tombol default */
+  height: 40px; /* Tinggi tombol default */
+  background-color: white;
+  color: var(--pr-color);
+  border: none;
+  font-size: 20px; /* Ukuran font default */
+  font-weight: 700;
+  margin-top: 20px;
+  display: flex; /* Menggunakan Flexbox untuk menyesuaikan teks di tengah */
+  align-items: center; /* Vertikal align ke tengah */
+  justify-content: center; /* Horizontal align ke tengah */
+
+  }
+}
+
+/* Responsive Design for Tablets and Larger Devices */
+@media (max-width: 1200px) {
+  .hero-tagline h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 8vw; /* Ukuran font responsif yang lebih besar untuk perangkat mobile */
+    line-height: 1.2; /* Jarak baris yang sesuai */
+  }
+
+  .hero-tagline p {
+    font-size: 4vw; /* Ukuran font responsif yang lebih besar untuk perangkat mobile */
+    color: white;
+    margin-bottom: 5vw; /* Margin bawah responsif yang lebih besar */
+    margin-top: 2vw; /* Margin atas responsif yang lebih kecil */
+    line-height: 1.4; /* Jarak baris yang sesuai */
+  }
+
+  .button-lg-primary {
+    font-size: 14px; /* Ukuran font default */
+  font-weight: 700;
+  }
+}
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/bg2.jpg);
+  background-size: 100hv;
+  background-position: center;
+  opacity: 0.1; /* Adjust the opacity value as needed */
+  z-index: -1; /* Ensure the background is behind other content */
+}
+
+
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+section blockquote {
+  font-size: 18px;
+  color: #555;
+  border-left: 4px solid #007bff;
+  padding-left: 15px;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Styling tombol navigasi */
+.btn-primary {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+mark {
+  background-color: yellow; /* Default yellow highlight */
+}

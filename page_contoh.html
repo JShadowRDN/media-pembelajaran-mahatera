@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Ceramah</title>
+  <!-- Link ke Bootstrap untuk gaya dan tata letak -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+<style>
+    /* Global Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #83c7ff;
+    padding-top: 20px;
+  }
+  
+  /* Navbar Style */
+  
+  /* Tab Styles */
+  .nav-tabs {
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .nav-tabs .nav-link {
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .nav-tabs .nav-link:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: #83c7ff;
+    color: white;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  /* Tab Content */
+  .tab-content {
+    margin-top: 20px;
+  }
+  
+  /* Card Styles */
+  .card {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #83c7ff;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card p, .card .quote, .card .verse {
+  margin-bottom: 15px; /* Menambahkan jarak antara paragraf dan elemen lainnya */
+}
+
+  .card-body {
+    background-color: #fff;
+    padding: 30px;    
+}
+  
+  
+  .card-body h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-body p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  
+    .nav-tabs .nav-link {
+      font-size: 1rem;
+    }
+  
+    .card-body h5 {
+      font-size: 1.3rem;
+    }
+  
+    .card-body p {
+      font-size: 1rem;
+    }
+  }
+
+  /* Menambahkan padding di dalam card untuk memberi jarak dengan konten */
+.card-body {
+  padding: 20px; /* Jarak antara konten dan tepi card */
+}
+
+/* Memberikan margin bawah pada setiap elemen p, quote, dan verse agar tidak mepet */
+.card p, .card .quote, .card .verse {
+  margin-bottom: 15px; /* Jarak antar elemen */
+}
+
+/* Tambahan: Gaya untuk elemen .quote dan .verse agar lebih jelas */
+.quote {
+  font-style: italic;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-left: 3px solid #28a745;
+}
+
+.verse {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-left: 3px solid #007bff;
+}
+
+.large-text {
+  font-size: 1.5rem; /* Menambahkan ukuran font untuk ayat */
+}
+
+
+
+
+  
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-container" ></div>
+
+  <script>
+    // Fungsi untuk memuat navbar dari file navbar.html
+   // Fungsi untuk memuat navbar dari file navbar.html
+fetch('navbar.html')
+.then(response => response.text())
+.then(data => {
+  document.getElementById('navbar-container').innerHTML = data;
+  // Setelah navbar dimuat, beri jarak pada section setelah navbar
+  document.querySelector('#ceramah').style.marginTop = '30px';
+})
+.catch(error => console.error('Error loading navbar:', error));
+
+  </script>
+
+<div class="container mt-5">
+
+  <!-- Content Section -->
+  <div class="container content-section">
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs" id="ceramahTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="ceramah-agama-tab" data-bs-toggle="tab" href="#sabar" role="tab" aria-controls="ceramah-agama" aria-selected="true">berbakti<a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="ceramah-keluarga-tab" data-bs-toggle="tab" href="#akhlak" role="tab" aria-controls="ceramah-keluarga" aria-selected="false">Akhlak</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="ceramah-pendidikan-tab" data-bs-toggle="tab" href="#tadzim" role="tab" aria-controls="ceramah-pendidikan" aria-selected="false">Pendidikan</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="ceramah-pendidikan-tab" data-bs-toggle="tab" href="#ceramah-pendidikan" role="tab" aria-controls="ceramah-pendidikan" aria-selected="false">Pendidikan</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="ceramahTabContent">
+      <!-- Ceramah Agama -->
+      <div class="tab-pane fade" id="sabar" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
+        <div class="card mt-3">
+          <div class="card-header">
+            Berbakti pada Orang Tua
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Assalamualaikum Warrahmatullahi Wabarakatuh.<br><br>
+              
+              Alhamdulillahirabbil Alamiin, assholatu wassalamu ala syrofil anbiya'i wa imamil mursalin, sayyidina wamaulana Muhammadin wa ala alihi wasohbihi aj'main. Amma Ba'du.<br><br>
+              
+              Yang pertama dan yang paling utama, mari kita panjatkan puji syukur ke hadirat Allah SWT. Karena sungguh tiada Tuhan selain Allah yang menguasai seluruh alam ini. Selawat serta salam kita limpahkan kepada Nabi Muhammad SAW. Semoga kita sebagai pengikutnya mendapatkan syafaat di hari kiamat kelak. Amiin ya Rabbal Alamiin.<br><br>
+              
+              Hadirin yang dirahmati Allah.<br><br>
+              
+              Setiap orang sudah pasti memiliki orang tua. Orang tua kita bekerja keras membesarkan kita, memberi kehidupan dan pendidikan yang layak untuk kita semua. Oleh karena itu, pada kesempatan ini izinkan saya menyampaikan materi kultum tentang pentingnya berbakti pada orang tua.<br><br>
+              
+              Allah SWT mewajibkan setiap anak untuk berbakti kepada orang tuanya. Perintah untuk berbuat baik kepada orang tua tercantum dalam Surat Al Isra ayat 23 yang berbunyi:<br><br>
+              
+              Wa qadaa Rabbuka allaa ta'buduu illaaa iyyaahu wa bilwaalidaini ihsaanaa; immaa yablighanna 'indakal kibara ahaduhumaaa aw kilaahumaa falaa taqul lahumaaa uffinw wa laa tanharhumaa wa qullahumaa qawlan kariimaa. Artinya: "Dan Tuhanmu telah memerintahkan agar kamu jangan menyembah selain Dia dan hendaklah berbuat baik kepada ibu bapak. Jika salah seorang di antara keduanya atau kedua-duanya sampai berusia lanjut dalam pemeliharaanmu, maka sekali-kali janganlah engkau mengatakan kepada keduanya perkataan 'ah' dan janganlah engkau membentak keduanya dan ucapkanlah kepada keduanya perkataan yang baik."<br><br>
+              
+              Berbakti kepada orang tua dapat dimulai dari hal-hal kecil, seperti membantu meringankan pekerjaan di rumah, berkomunikasi setiap hari jika anda berada jauh dari orang tua, atau merawat mereka ketika sakit. Janganlah sekali-sekali kita membentak atau menyakiti orang tua kita. Jika ada salah pada orang tua, segeralah meminta maaf.<br><br>
+              
+              Sekian kultum ini saya sampaikan, kurang dan lebihnya saya mohon maaf. Wassalamualaikum Warrahmatullahi Wabarakatuh.
+          </p>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+      <!-- Ceramah Keluarga -->
+      <div class="tab-pane fade" id="akhlak" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
+        <div class="card mt-3">
+          <div class="card-header">
+            Ceramah tentang Akhlak Mulia
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Assalamualaikum warahmatullahi wabarakatuh.<br><br>
+              
+              Dalam kesempatan kali ini, marilah kita panjatkan puji syukur kehadirat Allah SWT yang telah memberikan banyak sekali nikmat sehat, nikmat iman, serta hidayah-Nya kepada kita selaku hamba-Nya, sehingga dapat berkumpul di tempat ini.<br><br>
+              
+              Sholawat serta salam semoga tetap tercurah kepada junjungan kita Nabi Muhammad SAW, di mana atas berkat perjuangan beliau dan para sahabatnya sehingga kita dapat merasakan indahnya Islam seperti sekarang ini.<br><br>
+              
+              Hadirin yang dirahmati Allah, saya akan menyampaikan ceramah tentang akhlak. Akhlak merupakan sifat yang tertanam dalam jiwa seseorang yang menimbulkan macam-macam perbuatan dengan mudah tanpa memerlukan pemikiran dan pertimbangan.<br><br>
+              
+              Sebelum kita terjun ke dunia masyarakat, kita haruslah mempunyai bekal akhlak atau perilaku yang baik terhadap diri kita sendiri. Akhlak terhadap diri sendiri adalah pemenuhan kewajiban seseorang terhadap dirinya sendiri, baik yang menyangkut kebutuhan jasmani maupun rohani.<br><br>
+              
+              Akhlak atau perilaku terpuji yang harus dimiliki manusia terdiri dari beberapa sifat, salah satunya jujur. Perilaku jujur merupakan dasar dari sendi kehidupan.<br><br>
+              
+              Jujur adalah sikap dasar untuk membangun kepercayaan dari orang lain. Seseorang yang tidak memiliki kejujuran tidak akan memperoleh kepercayaan dari siapa pun.<br><br>
+              
+              Selain itu, kita harus memiliki rasa percaya diri. Rasa percaya diri sangat kita perlukan agar kita tidak ragu dalam menjalankan tugas yang menjadi tanggung jawab dalam kehidupan sehari-hari.<br><br>
+              
+              Dalam kehidupan bersosial, kita juga perlu memiliki sikap ramah dan sopan untuk menjaga hubungan antarsesama tanpa mempunyai perasaan bahwa diri kita lebih baik dibandingkan dengan yang lain. Sementara dalam menjalani kehidupan, sikap ikhlas sangat diperlukan agar hati menjadi tenang. Ikhlas berarti memberikan sesuatu kepada orang lain tanpa mengharapkan imbalan. Sikap ikhlas ini akan membuat seseorang memiliki jiwa sosial yang tinggi.<br><br>
+              
+              Akhlak yang baik akan membedakan kita sebagai manusia dengan makhluk yang lain, serta mengangkat manusia ke derajat yang tinggi dan mulia. Sedangkan akhlak yang buruk akan membinasakan diri kita.<br><br>
+              
+              Setelah Anda memahami pentingnya memiliki akhlak yang baik, maka teruslah berusaha untuk berbuat baik kepada diri sendiri dan orang lain.<br><br>
+              
+              Demikian apa yang dapat saya sampaikan, kurang lebihnya mohon maaf, semoga apa yang telah saya sampaikan dapat bermanfaat bagi kita semua. Terima kasih atas perhatiannya.<br><br>
+              
+              Wassalamualaikum warahmatullahi wabarakatuh.
+          </p>
+          
+            <p class="card-text">Sebagai masyarakat, kita harus memastikan bahwa setiap individu mendapatkan kesempatan untuk belajar dan berkembang. Dengan pendidikan yang baik, kita dapat menciptakan generasi penerus yang cerdas, berakhlak, dan mampu menghadapi tantangan zaman.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+      <!-- Ceramah Pendidikan -->
+      <div class="tab-pane fade" id="tadzim" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
+        <div class="card mt-3">
+          <div class="card-header">
+            Ceramah Tentang Pendidikan
+          </div>
+          <p class="card-text">
+            Assalamualaikum Warrahmatullahi Wabarakatuh.<br><br>
+        
+            Bapak kepala sekolah, para dewan guru, dan para murid yang saya banggakan. Pada kesempatan kali ini mari kita panjatkan puji dan syukur ke hadirat Allah SWT yang telah memberi kita begitu banyak nikmat sehingga kita dapat berkumpul di sini dalam keadaan sehat walafiat, tak lupa selawat serta salam kita panjatkan kepada Nabi besar kita yakni Nabi Muhammad SAW.<br><br>
+        
+            Saya ingin mengucap terima kasih kepada para hadirin yang telah memberikan saya kesempatan untuk hadir di sini dan menyampaikan ceramah mengenai pentingnya hormat kepada guru.<br><br>
+        
+            Guru adalah seseorang yang telah memberikan kita begitu banyak ilmu. Guru adalah orang tua kedua kita di sekolah. Guru mengajarkan kita tentang apa yang tidak kita ketahui. Guru juga mengajarkan kita tentang cara sopan santun, disiplin, tata tertib, dan bagaimana menjadi murid teladan. Guru adalah orang tua kita di sekolah. Salah satu kewajiban kita adalah menghormati orang tua. Maka dari itu, kita harus menghormati para guru saat kita sedang belajar di sekolah dan selalu mematuhi apa yang dikatakan guru.<br><br>
+        
+            Sekian dari saya. Mohon maaf bila ada kesalahan. Akhiru kalam, Wassalamualaikum Warrahmatullahi Wabarakatuh.
+        </p>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Ceramah Pendidikan -->
+   <div class="tab-pane fade" id="ceramah-pendidikan" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
+    <div class="card mt-3">
+      <div class="card-header">
+        Ceramah Tentang Pendidikan
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Pendidikan adalah Kunci Masa Depan</h5>
+        <p class="card-text">Pendidikan adalah investasi terbesar untuk masa depan bangsa. Setiap anak berhak mendapatkan pendidikan yang layak, karena melalui pendidikan mereka akan menemukan potensi diri dan dapat berkontribusi kepada masyarakat dan negara. Pendidikan bukan hanya tentang teori, tetapi juga tentang membangun karakter dan keterampilan hidup.</p>
+        <p class="card-text">Sebagai masyarakat, kita harus memastikan bahwa setiap individu mendapatkan kesempatan untuk belajar dan berkembang. Dengan pendidikan yang baik, kita dapat menciptakan generasi penerus yang cerdas, berakhlak, dan mampu menghadapi tantangan zaman.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <!-- JavaScript untuk Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
