@@ -17,7 +17,7 @@
  <link rel="stylesheet" href="css/styles.css">
 
  <!-- logo title -->
-  <link rel="icon" href="assets/img/--"
+  <link rel="icon" href="assets/BIG.png"
   type="">
 
     <title>MAHATERA</title>
@@ -25,7 +25,7 @@
   <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-transparent position-fixed w-100">
+  <nav id="navbar" class="navbar navbar-dark  position-fixed w-100">
     <div class="container-fluid">
       <a class="navbar-brand" href="#home" onclick="scrollToSection('pengertian')">
         <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
@@ -37,23 +37,30 @@
     </div>
   </nav>
 
-    <!-- Hero Section -->
-  <section id="hero"> 
-  <div class="container h-100">
-      <div class="row h-100">
-          <div class="col-md-6 hero-tagline my-auto" >
-              <h1>MAHATERA</h1>
-              <p>Mading Bahasa Teks Ceramah</p>
-              <p><small>Suhesti Anggraini</small></p>
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-overlay">
+    <!-- Gambar utama di tengah -->
+    <img src="assets/BIG.png" alt="Logo Utama" class="img-center">
+    <h2>SELAMAT DATANG</h2>
+    <!-- Logo kiri atas -->
+    <img src="assets/LOGO-FIP-2022-baru.png" alt="Logo Kiri" class="img-top-left">
 
-              <button class="button-lg-primary" onclick="scrollToSection('pengertian')">Selengkapnya</button>
-          </div>
-      </div>
-      <img src="assets/ceramah.png" alt="Gambar lama" class="position-absolute top-0 start-0 img-hero" style="max-width: 1000px; height: auto; z-index: 1;">
-      <img src="assets/LOGO-FIP-2022-baru.png" alt="Gambar baru" class="position-absolute top-0 start-0 img-new" style="max-width: 500px; height: auto; z-index: 2;">
-      <img src="assets/sekolah.png" alt="Gambar dua" class="position-absolute top-0 start-0 img-second" style="max-width: 500px; height: auto; z-index: 2;">
+    <!-- Gambar kanan atas -->
+    <img src="assets/sekolah.png" alt="Logo Kanan" class="img-top-right">
+
+    <!-- Gambar background -->
+    <img src="assets/bg2.jpg" alt="Background Hero" class="img-bg">
+
+    <!-- Tombol di tengah bawah -->
+    <div class="hero-button">
+      <button class="button-lg-primary" onclick="scrollToSection('pengertian')">Selengkapnya</button>
+    </div>
   </div>
-  </section>
+</section>
+
+
 
 <!-- Pengertian ceramah -->
  <section id="pengertian">
@@ -165,7 +172,7 @@
       <div class="row">
         <div class="col-md-6 d-flex">
           <div class="column-content">
-            <img src="assets/img/image4.png" alt="Ceramah Umum" class="img-fluid mb-2">
+            <img src="assets/bg1.png" alt="Ceramah Umum" class="img-fluid mb-2">
           <h3>Ceramah Umum</h3>
           <p>Ceramah umum merupakan pidato yang memiliki tujuan untuk memberikan nasihat kepada masyarakat luas atau kepada khayalak umum. Adapun secara keseluruhan, ceramah umum memiliki sifat menyeluruh tidak terdapat batasan-batasa apa pun, baik dari materi dan audiens yang tua maupun yang muda tidak ditentukan sesuai dengan acara.</p>
         </div>
@@ -173,7 +180,7 @@
       <div class="col-md-6 d-flex">
         <div class="column-content">
           <!-- Gambar di atas konten kolom kedua -->
-          <img src="assets/img/image4.png" alt="Ceramah Khusus" class="img-fluid mb-3">
+          <img src="assets/bg1.png" alt="Ceramah Khusus" class="img-fluid mb-3">
           <h3>Ceramah Khusus</h3>
           <p>Ceramah khusus memiliki tujuan untuk memberikan nasihat-nasiaht pada khayalak tertentu dan memiliki sifat khusus, baik itu materi maupun yang lainnya. Batasan-batasan yang dibuat dalam ceramah khususnya, mulai dari materi yang menyesuaikan dengan keadaan dan audiens yang sesuai dengan yang diinginkan.</p>
         </div>
@@ -298,6 +305,25 @@
   </div>
 </section>
 
+<!-- Video Section -->
+<section id="video-section">
+  <div class="container-video">
+    <h2 class="video-title">Contoh Video Teks Ceramah</h2>
+    <div class="video-grid">
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/QO09QARMTbc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/Pkrpbahn_dI" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/7s60md4_GSc" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   
 
@@ -334,6 +360,18 @@
     });
   }
 </script>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
