@@ -559,160 +559,39 @@ transition: all .2s ease-in;
     
   }
 
-/* Styling untuk section jenis */
-#jenis {
-  background-image: url(../assets/TP.jpg); /* Tidak ada warna latar belakang */
-  height: 100vh; /* Tinggi 90% dari viewport */
-  background-repeat: no-repeat; /* Tidak mengulangi gambar latar belakang */
-  background-size: cover; /* Menutupi seluruh area */
-  background-position: center; /* Posisi gambar di tengah */
-  display: flex; /* Menggunakan Flexbox untuk tata letak */
-  align-items: center; /* Menyelaraskan item di tengah secara vertikal */
-  justify-content: center; /* Menyelaraskan item di tengah secara horizontal */
-  padding: 0 3rem; /* Padding horizontal jika diperlukan */
+/* Styling untuk seluruh card */
+#main-content {
+  color: #003366;
 }
 
-/* Styling untuk heading di dalam search */
-#jenis h2 {
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 72px;
-  letter-spacing: 0;
-  text-align: center;
+.card-body {
+  font-size: 16px;
+}
+
+/* Styling untuk header card */
+.card-header {
+  background-color: #57616c; /* Warna biru Bootstrap */
   color: white;
-  margin-top: 5rem; /* Jarak tambahan di atas heading */
-  margin-bottom: 3rem;
 }
 
-#jenis h3 {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0;
-  text-align: left;
-  color: var(--pr-color);
-  margin-top: 1rem; /* Jarak tambahan di atas heading */
+/* Penambahan sedikit margin di bawah judul */
+text-center h2 {
+  margin-bottom: 30px;
+  color: #003366;
 }
 
-/* Styling untuk paragraf di dalam search */
-#jenisv p {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 36px;
-  letter-spacing: 0;
-  text-align: center;
-  color: var(--pr-color);
-  margin-top: 1rem; /* Jarak tambahan di atas paragraf */
+/* Menambahkan padding agar isi card lebih rapi */
+.card-body p {
+  margin: 0;
+  padding: 10px 0;
 }
 
-/* Styling untuk gambar di dalam kolom */
-.img-fluid {
-  max-width: 100%; /* Menjaga gambar tidak melampaui lebar kontainer */
-  height: auto; /* Menjaga rasio aspek gambar */
-  border-radius: 8px; /* Menambahkan sudut melengkung pada gambar jika diinginkan */
-}
-
-/* Styling untuk konten kolom */
-.column-content {
-  padding: 2rem;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
-  margin-bottom: 6rem; 
-}
-
-/* Tambahan jarak di bawah gambar */
-.mb-3 {
-  margin-bottom: none; /* Menambahkan jarak di bawah gambar */
-}
-
-/* Styling tambahan untuk teks dalam kolom */
-.column-content h3 {
-  margin-top: 0;
-}
-
-.column-content p {
-  margin-bottom: 0;
-}
-
-/* Media Queries untuk perangkat mobile */
-@media (max-width: 768px) {
-  #jenis {
-    background-color: none; /* Tidak ada warna latar belakang */
-    height: 180vh; /* Tinggi 90% dari viewport */
-    background-repeat: no-repeat; /* Tidak mengulangi gambar latar belakang */
-    background-size: cover; /* Menutupi seluruh area */
-    background-position: center; /* Posisi gambar di tengah */
-    display: flex; /* Menggunakan Flexbox untuk tata letak */
-    align-items: center; /* Menyelaraskan item di tengah secara vertikal */
-    justify-content: center; /* Menyelaraskan item di tengah secara horizontal */
-    padding: 0 1.5rem; /* Padding horizontal jika diperlukan */
-  }
-
-  #jenis h2 {
-    font-size: 36px; /* Mengurangi ukuran font untuk heading pada perangkat mobile */
-    line-height: 48px; /* Mengurangi jarak baris untuk heading */
-    margin-top: 5rem; /* Mengurangi jarak atas heading pada perangkat mobile */
-  }
-
-  #jenis h3 {
-    font-size: 20px; /* Mengurangi ukuran font untuk sub-heading pada perangkat mobile */
-    line-height: 28px; /* Mengurangi jarak baris untuk sub-heading */
-    text-align: center; /* Menyelaraskan sub-heading ke tengah pada perangkat mobile */
-    margin-top: 1rem; /* Jarak tambahan di atas sub-heading */
-  }
-
-  #jenis p {
-    font-size: 18px; /* Mengurangi ukuran font untuk paragraf pada perangkat mobile */
-    line-height: 26px; /* Mengurangi jarak baris untuk paragraf */
-  }
-
-  .column-content {
-    padding: 1rem; /* Mengurangi padding dalam kolom pada perangkat mobile */
-    margin-bottom: 3rem; /* Mengurangi jarak bawah kolom pada perangkat mobile */
-  }
-
-  .img-fluid {
-    border-radius: 4px; /* Mengurangi sudut melengkung pada gambar untuk perangkat mobile */
+/* Responsif untuk tampilan lebih baik di perangkat mobile */
+@media (max-width: 767px) {
+  .card {
+      margin-bottom: 20px;
   }
 }
-
-@media (max-width: 480px) {
-  #jenis {
-    padding: 0 1rem; /* Mengurangi padding horizontal lebih lanjut pada perangkat kecil */
-  }
-
-  #jenis h2 {
-    font-size: 28px; /* Mengurangi ukuran font untuk heading pada perangkat kecil */
-    line-height: 36px; /* Mengurangi jarak baris untuk heading */
-    margin-top: 3rem; /* Mengurangi jarak atas heading pada perangkat kecil */
-  }
-
-  #jenis h3 {
-    font-size: 18px; /* Mengurangi ukuran font untuk sub-heading pada perangkat kecil */
-    line-height: 24px; /* Mengurangi jarak baris untuk sub-heading */
-  }
-
-  #jenis p {
-    font-size: 16px; /* Mengurangi ukuran font untuk paragraf pada perangkat kecil */
-    line-height: 22px; /* Mengurangi jarak baris untuk paragraf */
-  }
-
-  .column-content {
-    padding: 1rem; /* Mengurangi padding dalam kolom lebih lanjut pada perangkat kecil */
-    margin-bottom: 2rem; /* Mengurangi jarak bawah kolom pada perangkat kecil */
-  }
-
-  .img-fluid {
-    border-radius: 4px; /* Memastikan sudut melengkung konsisten pada perangkat kecil */
-  }
-}
-
-/* --------------------------------------------------------------- */
 
 
 /* Styling untuk section struktur */
@@ -1138,5 +1017,59 @@ mark {
 
   .video-item iframe {
     height: 200px;
+  }
+}
+
+
+.ciriciri {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ciriciri h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.ciriciri .source {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-left: 5px solid #3498db;
+  border-radius: 6px;
+  padding: 15px 20px;
+  flex: 1 1 calc(48% - 10px); /* 2 cards per row on medium/large screen */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  min-width: 280px; /* responsive minimum width */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background-color: #eef6fd;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Stack cards vertically on small screens */
   }
 }
