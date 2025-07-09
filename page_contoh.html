@@ -168,24 +168,27 @@ fetch('navbar.html')
   <!-- Content Section -->
   <div class="container content-section">
     <!-- Tab Navigation -->
-    <ul class="nav nav-tabs" id="ceramahTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="ceramah-agama-tab" data-bs-toggle="tab" href="#sabar" role="tab" aria-controls="ceramah-agama" aria-selected="true">berbakti<a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="ceramah-keluarga-tab" data-bs-toggle="tab" href="#akhlak" role="tab" aria-controls="ceramah-keluarga" aria-selected="false">Akhlak</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="ceramah-pendidikan-tab" data-bs-toggle="tab" href="#tadzim" role="tab" aria-controls="ceramah-pendidikan" aria-selected="false">Pendidikan</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="ceramah-pendidikan-tab" data-bs-toggle="tab" href="#ceramah-pendidikan" role="tab" aria-controls="ceramah-pendidikan" aria-selected="false">Pendidikan</a>
-      </li>
-    </ul>
+   <!-- Tab Navigation -->
+<ul class="nav nav-tabs" id="ceramahTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="ceramah-agama-tab" data-bs-toggle="tab" href="#sabar" role="tab" aria-controls="sabar" aria-selected="true">Berbakti</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="ceramah-keluarga-tab" data-bs-toggle="tab" href="#akhlak" role="tab" aria-controls="akhlak" aria-selected="false">Akhlak</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="ceramah-pendidikan-tab" data-bs-toggle="tab" href="#pendidikan1" role="tab" aria-controls="tadzim" aria-selected="false">Pendidikan</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="ceramah-pendidikan2-tab" data-bs-toggle="tab" href="#pendidikan" role="tab" aria-controls="pendidikan" aria-selected="false">Pendidikan 2</a>
+  </li>
+</ul>
+
+ 
 
     <div class="tab-content" id="ceramahTabContent">
       <!-- Ceramah Agama -->
-      <div class="tab-pane fade" id="sabar" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
+  <div class="tab-pane fade show active" id="sabar" role="tabpanel" aria-labelledby="ceramah-agama-tab">
         <div class="card mt-3">
           <div class="card-header">
             Berbakti pada Orang Tua
@@ -214,8 +217,7 @@ fetch('navbar.html')
           </div>
         </div>
       </div>
-    </div>
-  </div>
+   
     
 
       <!-- Ceramah Keluarga -->
@@ -257,12 +259,11 @@ fetch('navbar.html')
           </div>
         </div>
       </div>
-    </div>
-  </div>
+   
     
 
       <!-- Ceramah Pendidikan -->
-      <div class="tab-pane fade" id="tadzim" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
+  <div class="tab-pane fade" id="pendidikan1" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
         <div class="card mt-3">
           <div class="card-header">
             Ceramah Tentang Pendidikan
@@ -282,10 +283,10 @@ fetch('navbar.html')
         </div>
       </div>
     </div>
-  </div>
+  
 
    <!-- Ceramah Pendidikan -->
-   <div class="tab-pane fade" id="ceramah-pendidikan" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
+  <div class="tab-pane fade" id="pendidikan" role="tabpanel" aria-labelledby="ceramah-pendidikan-tab">
     <div class="card mt-3">
       <div class="card-header">
         Ceramah Tentang Pendidikan
