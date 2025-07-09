@@ -1,4 +1,6 @@
-
+:root {
+    --pr-color : #83c7ff;
+}
 /* Responsive Design */
 @media (max-width: 767px) {
   .navbar {
