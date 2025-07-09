@@ -99,32 +99,31 @@ body {
 /* hero */
 #hero { 
   background: linear-gradient(160deg, #83c7ff, #51b1ff);
-  height:30vh;
-  width:100%;
-  
+  height: 50vh; /* atau lebih jika butuh ruang */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-
 .hero-tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 12%; /* Menempatkan tagline di tengah vertikal kontainer */
-  left: 50%; /* Menempatkan tagline di tengah horizontal kontainer */
-  transform: translate(-50%, -50%); /* Menggeser tagline untuk benar-benar berada di tengah */
-  text-align: center; /* Menyelaraskan teks di tengah */
-  width: 80%; /* Atur lebar jika diperlukan, atau sesuaikan sesuai kebutuhan */
-  max-width: 800px; /* Maksimum lebar untuk tagline agar tidak terlalu lebar */
+  width: 100%;
 }
 
 .hero-tagline h1 {
-  color:white ;
+  color: white;
   font-weight: 700;
   font-size: 50px;
-  line-height: 72px;
-}
+  line-height: 1.2;
+} 
 
 .hero-name {
   font-size: 0.5em; /* Mengatur ukuran font lebih kecil dari teks utama */
@@ -135,10 +134,8 @@ body {
 .hero-tagline p {
   font-size: 24px;
   color: white;
-  margin-bottom: 60px;
-  margin-top: 20px;
-  line-height: 5%;
-  width: 90%;
+  margin-top: 10px;
+  line-height: 1.4;
 }
 
 .button-lg-primary {
@@ -169,13 +166,14 @@ body {
   }
 
   .hero-tagline {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
     left: 8%; /* Menggeser tagline lebih dekat ke kiri pada perangkat mobile */
-    top: 30%; /* Menyelaraskan secara vertikal di tengah */
+    top: 50%; /* Menyelaraskan secara vertikal di tengah */
     transform: translateY(-50%); /* Mengoreksi penyelarasan vertikal */
     text-align: center;
     width: 90%; /* Lebar tagline penuh pada perangkat mobile */
